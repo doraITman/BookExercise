@@ -1,14 +1,9 @@
 ﻿using BookExercise.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BookExercise.Controllers
 {
+    [Route("/[action]")]
     public class HomeController : Controller
     {
         [HttpGet]
@@ -18,10 +13,10 @@ namespace BookExercise.Controllers
         }
 
         [HttpPost]
-        public ViewResult RsvpForm([FromBody]GuestResponse guestResponse)
+        public ViewResult RsvpForm([FromForm] GuestResponse guestResponse)
         {
             Repoitory.AddResponse(guestResponse);
-            return View("Thanks",guestResponse);
+            return View("Thanks", guestResponse);
         }
         
     }
