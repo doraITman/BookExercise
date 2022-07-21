@@ -1,5 +1,6 @@
 ﻿using BookExercise.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace BookExercise.Controllers
 {
@@ -17,6 +18,12 @@ namespace BookExercise.Controllers
         {
             Repoitory.AddResponse(guestResponse);
             return View("Thanks", guestResponse);
+        }
+
+        [HttpGet]
+        public ViewResult ListResponses()
+        {
+            return View(Repoitory.Responses.Where(r => r.WillAttend == true));
         }
         
     }

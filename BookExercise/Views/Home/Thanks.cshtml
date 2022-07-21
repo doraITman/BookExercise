@@ -2,6 +2,7 @@
 @{
     Layout = null;
 }
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <!DOCTYPE html>
 
@@ -12,5 +13,14 @@
 </head>
 <body>
     <h1>Thanks, @Model.Name </h1>
+    @if (Model.WillAttend==true)
+    {
+        @:Dobro pojalovaty
+    }
+    else
+    {
+        @:Sorry
+    }
+    <p><a asp-action="ListResponse"> here</a> to see who is coming</p>
 </body>
 </html>
