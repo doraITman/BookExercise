@@ -1,0 +1,23 @@
+﻿@model  IEnumerable<BookExercise.Models.GuestResponse>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListResponses</title>
+</head>
+<body>
+    @foreach(BookExercise.Models.GuestResponse r in Model)
+    {
+        <tr>
+            <td>@r.Name</td>
+             <td>@r.Email</td>
+              <td>@r.Phone</td>
+        </tr>
+    }
+</body>
+</html>
