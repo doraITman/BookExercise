@@ -17,5 +17,6 @@ namespace BookExercise.Models
         public int MyProperty2 { get; set; }
         public int MyProperty3 { get; set; }
         public int Myproperty4 { get; set; }
+        public int MyProperty5 { get; set; }
     }
 }
