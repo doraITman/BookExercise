@@ -16,8 +16,16 @@ namespace BookExercise.Controllers
         [HttpPost]
         public ViewResult RsvpForm([FromForm] GuestResponse guestResponse)
         {
-            Repoitory.AddResponse(guestResponse);
-            return View("Thanks", guestResponse);
+            if (ModelState.IsValid)
+            {
+                Repoitory.AddResponse(guestResponse);
+                return View("Thanks", guestResponse);
+            }
+            else
+            {
+                return View();
+            }
+            
         }
 
         [HttpGet]
