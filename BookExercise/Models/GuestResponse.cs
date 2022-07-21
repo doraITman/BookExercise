@@ -17,6 +17,9 @@ namespace BookExercise.Models
         public int MyProperty2 { get; set; }
         public int MyProperty3 { get; set; }
         public int Myproperty4 { get; set; }
+<<<<<<< HEAD
         public int MyProperty5 { get; set; }
+=======
+>>>>>>> 8f2b9aa (new property MyProperty4)
     }
 }
