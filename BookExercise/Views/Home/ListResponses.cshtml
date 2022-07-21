@@ -11,13 +11,20 @@
     <title>ListResponses</title>
 </head>
 <body>
+    <table>
+
+        <thead>
     @foreach(BookExercise.Models.GuestResponse r in Model)
-    {
-        <tr>
-            <td>@r.Name</td>
-             <td>@r.Email</td>
-              <td>@r.Phone</td>
-        </tr>
-    }
+        {
+            <tr>
+                <td>@r.Name</td>
+                 <td>@r.Email</td>
+                  <td>@r.Phone</td>
+            </tr>
+        }
+    </thead>
+    </table>
+    
+    
 </body>
 </html>
